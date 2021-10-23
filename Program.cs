@@ -6,15 +6,18 @@ namespace Universal_massiv
     {
         static void Main(string[] args)
         {
-            int[] myArray = {1, 2, 3};
-            Resize<int>(ref myArray, 4);
+            //int[] myArray = {1, 2, 3};
+            string[] myString = new[] { "Test", "Hello", "Tomas"};
+            
+            Resize<string>(ref myString, 1);
         }
 
 
-        static  void Resize<T>(ref int[] array, int newSize)
+        static  void Resize<T>(ref T[] array, int newSize)
         {
-           int[] newArray = new int[newSize];
-           for (int i = 0; i < array.Length && i < newArray.Length; i++)
+           T[] newArray = new T[newSize];
+
+           for (var i = 0; i < array.Length && i < newArray.Length; i++)
            {
                newArray[i] = array[i];
            }
