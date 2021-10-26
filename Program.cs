@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 
 namespace Universal_massiv
@@ -8,6 +7,7 @@ namespace Universal_massiv
     {
         static void Main(string[] args)
         {
+            #region Вывести массив в обратном порядке/заполнить массив с клавиатуры
 
             //Console.WriteLine("Enter an array with a caviatura");
             //int[] mass = new int[5];
@@ -16,13 +16,32 @@ namespace Universal_massiv
             //    mass[i] = int.Parse(Console.ReadLine());
             //}
 
-            Console.WriteLine("Output of the array in reverse order");
-            int[] myArray = {1, 2, 3, 4};
-            for (int i = myArray.Length; i > 0; i--)
+            //Console.WriteLine("Output of the array in reverse order");
+            //int[] myArray = {1, 2, 3, 4};
+            //for (int i = myArray.Length; i > 0; i--)
+            //{
+            //    Console.WriteLine(myArray[i - 1]);
+            //}
+            #endregion
+
+
+
+            ///////////////////////////////////////////Find the sum of even numbers in the array/////////////////////////////////////////////////////////////
+
+            int[] maArray = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            for (int i = 0; i < maArray.Length; i++)
             {
-                Console.WriteLine(myArray[i - 1]);
+                Console.WriteLine("\nOutput of the initial array" + maArray[i]);
             }
-            
+
+           
+            for (int i = 0; i < maArray.Length; i++)
+            {
+               if(maArray[i]%2==0)
+                {
+                    Console.WriteLine("\nOutput of even array elements" +  maArray[i]);
+                }
+            }
             #region show myArray
 
             ////int[] myArray = {1, 2, 3};
@@ -31,18 +50,18 @@ namespace Universal_massiv
             //Resize(ref myString, 1);
 
             #endregion
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////< меньше   > Больше//////////////////////////
+            ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////< меньше   > Больше//////////////////////////
             //int[] myArray = {1, 4, 6, 2};
             //AddFirst(ref myArray, -5);
             //AddLast(ref myArray, 9);
             //InnerArray<T>(ref myArray, -5, 0); // // If we specify zero 0 in place 2 , then we will add an element to the beginning of the array
             //AddFirst(ref myArray, -5);
             //AddLast(ref myArray,-5 );
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-          
+
             Console.ReadLine();
         }
 
