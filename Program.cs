@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 
 namespace Universal_massiv
@@ -23,25 +24,24 @@ namespace Universal_massiv
             //    Console.WriteLine(myArray[i - 1]);
             //}
             #endregion
-
-
-
+            #region Find the sum of even numbers in the array
             ///////////////////////////////////////////Find the sum of even numbers in the array/////////////////////////////////////////////////////////////
 
-            int[] maArray = { 1, 2, 3, 4, 5, 6, 7, 8 };
-            for (int i = 0; i < maArray.Length; i++)
-            {
-                Console.WriteLine("\nOutput of the initial array" + maArray[i]);
-            }
+            //int[] maArray = { 1, 2, 3, 4, 5, 6, 7, 8 };
+            //for (int i = 0; i < maArray.Length; i++)
+            //{
+            //    Console.WriteLine("\nOutput of the initial array" + maArray[i]);
+            //}
 
-           
-            for (int i = 0; i < maArray.Length; i++)
-            {
-               if(maArray[i]%2==0)
-                {
-                    Console.WriteLine("\nOutput of even array elements" +  maArray[i]);
-                }
-            }
+
+            //for (int i = 0; i < maArray.Length; i++)
+            //{
+            //   if(maArray[i]%2==0)
+            //    {
+            //        Console.WriteLine("\nOutput of even array elements" +  maArray[i]);
+            //    }
+            //}
+            #endregion
             #region show myArray
 
             ////int[] myArray = {1, 2, 3};
@@ -50,6 +50,7 @@ namespace Universal_massiv
             //Resize(ref myString, 1);
 
             #endregion
+            #region rezult Array
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////< меньше   > Больше//////////////////////////
             //int[] myArray = {1, 4, 6, 2};
             //AddFirst(ref myArray, -5);
@@ -58,12 +59,20 @@ namespace Universal_massiv
             //AddFirst(ref myArray, -5);
             //AddLast(ref myArray,-5 );
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            #endregion
+            //////////////////////////////////////////Output of the minimum and maximum elements of the array///////////////////////////////////////////////////////////////
+            int[] myArray = { 10, 23, 45, 6, 12, 7, 89, 11 };
+            massArray(ref myArray, myArray.Length);
 
-
-
-
-            Console.ReadLine();
+            for (int i = 0; i < myArray.Length; i++)
+             {
+                 Console.WriteLine("Array output" + myArray[i],Console.ForegroundColor = ConsoleColor.Yellow);
+                 
+             }
+             Console.ReadLine();
         }
+
+      
 
         #region massiv universal
         //static  void Resize<T>(ref T[] array, int newSize)
@@ -77,7 +86,7 @@ namespace Universal_massiv
 
         //   array = newArray;
         //}
-        #endregion 
+        #endregion
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         #region Massiv_Insert_Add_T
 
@@ -106,6 +115,23 @@ namespace Universal_massiv
         //    }
         //}
         #endregion
+
+        private static void massArray(ref int[] array, int min)
+        {
+            
+            for (var i = 0; i < array.Length; i++)
+            {
+                if (min > array[i])
+                {
+                    min = array[i];
+                   
+                }
+            }
+            Console.WriteLine("Minimum element in the array:" +  min, Console.ForegroundColor = ConsoleColor.Black);
+          
+
+        }
+
     }
 }
 
