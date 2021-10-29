@@ -60,19 +60,29 @@ namespace Universal_massiv
             //AddLast(ref myArray,-5 );
             //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             #endregion
-            //////////////////////////////////////////Output of the minimum and maximum elements of the array///////////////////////////////////////////////////////////////
-            int[] myArray = { 10, 23, 45, 6, 12, 7, 89, 11 };
-            massArray(ref myArray, myArray.Length);
+            #region Output of the minimum and maximum elements of the array
 
-            for (int i = 0; i < myArray.Length; i++)
-             {
-                 Console.WriteLine("Array output" + myArray[i],Console.ForegroundColor = ConsoleColor.Yellow);
-                 
-             }
-             Console.ReadLine();
+            //////////////////////////////////////////Output of the minimum and maximum elements of the array///////////////////////////////////////////////////////////////
+            //int[] myArray = { 10, 23, 45, 6, 12, 7, 89, 11 };
+            //massArray(ref myArray, myArray.Length);
+
+            //for (int i = 0; i < myArray.Length; i++)
+            // {
+            //     Console.WriteLine("Array output" + myArray[i],Console.ForegroundColor = ConsoleColor.Yellow);
+
+            // }
+            #endregion
+
+            int[] myArray = {12, 3, 23,12, 34, 5, 345, 5, 3};
+
+            //Console.WriteLine(myArray.Where(t=>t%2!=0).Min());
+            //int[] result = myArray.Distinct().ToArray(); // Вывести уникальные элементы в массиве
+            //var result = myArray.OrderByDescending(t => t).ToArray();// Отсортировать массив по возрастанию
+            
+            Console.ReadLine();
         }
 
-      
+
 
         #region massiv universal
         //static  void Resize<T>(ref T[] array, int newSize)
@@ -115,22 +125,24 @@ namespace Universal_massiv
         //    }
         //}
         #endregion
-
-        private static void massArray(ref int[] array, int min)
-        {
+        #region Output of the minimum and maximum elements of the array
+        //private static void massArray(ref int[] array, int min)
+        //{
             
-            for (var i = 0; i < array.Length; i++)
-            {
-                if (min > array[i])
-                {
-                    min = array[i];
+        //    for (var i = 0; i < array.Length; i++)
+        //    {
+        //        if (min > array[i])
+        //        {
+        //            min = array[i];
                    
-                }
-            }
-            Console.WriteLine("Minimum element in the array:" +  min, Console.ForegroundColor = ConsoleColor.Black);
+        //        }
+        //    }
+        //    Console.WriteLine("Minimum element in the array:" +  min, Console.ForegroundColor = ConsoleColor.Black);
           
 
-        }
+        //}
+        #endregion
+
 
     }
 }
