@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Xml.Serialization;
 
 
 namespace Universal_massiv
@@ -72,14 +73,77 @@ namespace Universal_massiv
 
             // }
             #endregion
-
-            int[] myArray = {12, 3, 23,12, 34, 5, 345, 5, 3};
-
+            #region выводы условий 
+            //int[] myArray = { 12, 3, 23, 12, 34, 5, 345, 5, 3 };
+            // //int result =    Array.FindLast(myArray, i =>i < 346 );
+            // //Console.WriteLine(result);
+            // int result = myArray.Where(t => t < 50).FirstOrDefault();
+            //SortMass<int>(ref myArray);
             //Console.WriteLine(myArray.Where(t=>t%2!=0).Min());
             //int[] result = myArray.Distinct().ToArray(); // Вывести уникальные элементы в массиве
             //var result = myArray.OrderByDescending(t => t).ToArray();// Отсортировать массив по возрастанию
-            
+            //Array.Sort(myArray);
+            #endregion
+            #region Четные числа в массиве
+
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    if (i % 2 == 0)
+            //    {
+            //        Console.WriteLine(i);
+            //    }
+            //}
+
+            //Array.Reverse(myArray);
+            //for (int i = 0; i < myArray.Length; i++)
+            //{
+            //    Console.WriteLine(myArray[i]);
+            //}
+            #endregion
+            #region Вывод массива в обратном порядке
+            //int[] myArray = {1, 2, 3, 4 ,5, 6, 7};
+            //Console.WriteLine("Вывод массива");
+            //for (int i = 0; i < myArray.Length; i++)
+            //{
+            //    Console.WriteLine($"\t\t{myArray[i]}");
+            //}
+            //Array.Reverse(myArray);
+            //Console.WriteLine("Обратный порядок");
+            //foreach (var item in myArray)
+            //{
+            //    Console.WriteLine($"\t\t{item}");   
+            //}
+            #endregion
+            #region MassFindAll
+            //int[] myArray = {1, 2, 3, 4, 12, 44, 1};
+            //var result = Array.FindAll(myArray, i => i < 2).ToArray();
+            #endregion
+           
+            var myArray = new[,]
+            {
+                {2,3,4,556,6},
+                {4,5,43,2,67},
+                {55,7,4,0,45},
+                {4,56,7,4,3},
+                {45,5,6,7,22}
+            };
+          
+            for (int i = 0; i <myArray.GetLength(0); i++)
+            {
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+
+                    Console.Write(myArray[i,j] + "\t");
+                }
+
+                Console.WriteLine();
+              
+            }
+
+
+
             Console.ReadLine();
+            
         }
 
 
@@ -128,22 +192,39 @@ namespace Universal_massiv
         #region Output of the minimum and maximum elements of the array
         //private static void massArray(ref int[] array, int min)
         //{
-            
+
         //    for (var i = 0; i < array.Length; i++)
         //    {
         //        if (min > array[i])
         //        {
         //            min = array[i];
-                   
+
         //        }
         //    }
         //    Console.WriteLine("Minimum element in the array:" +  min, Console.ForegroundColor = ConsoleColor.Black);
-          
+
 
         //}
         #endregion
+        #region BubleSortMass
 
-
+        // public static void SortMass<T>(ref int[] array)
+        //{
+        //    int temp;
+        //     for (int i = 0; i <array.Length ; i++)
+        //     {
+        //         for (int j = i; j < array.Length; j++)
+        //         {
+        //            if(array[i] < array[j])
+        //            {
+        //                temp = array[i];
+        //                array[i] = array[j];
+        //                array[j] = temp;
+        //            }
+        //         }
+        //    }
+        //}
+         #endregion
     }
 }
 
