@@ -118,32 +118,54 @@ namespace Universal_massiv
             //int[] myArray = {1, 2, 3, 4, 12, 44, 1};
             //var result = Array.FindAll(myArray, i => i < 2).ToArray();
             #endregion
-           
-            var myArray = new[,]
-            {
-                {2,3,4,556,6},
-                {4,5,43,2,67},
-                {55,7,4,0,45},
-                {4,56,7,4,3},
-                {45,5,6,7,22}
-            };
-          
-            for (int i = 0; i <myArray.GetLength(0); i++)
-            {
-                for (int j = 0; j < myArray.GetLength(1); j++)
-                {
+            #region MyArrayGetLength
+            //var myArray = new[,]
+            //{
+            //    {2,3,4,556,6},
+            //    {4,5,43,2,67},
+            //    {55,7,4,0,45},
+            //    {4,56,7,4,3},
+            //    {45,5,6,7,22}
+            //};
 
-                    Console.Write(myArray[i,j] + "\t");
-                }
+            //for (int i = 0; i <myArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myArray.GetLength(1); j++)
+            //    {
 
-                Console.WriteLine();
-              
-            }
+            //        Console.Write(myArray[i,j] + "\t");
+            //    }
+
+            //    Console.WriteLine();
+
+            //}
+            #endregion
+            #region Array Random
+            //int[,] myArray = new int[10, 6];
+            //Random rnd = new Random();
+
+            //for (int i = 0; i < myArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myArray.GetLength(1); j++)
+            //    {
+            //        myArray[i, j] = rnd.Next(100);
+            //    }
+
+            // }
+            //for (int i = 0; i < myArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myArray.GetLength(1); j++)
+            //    {
+            //        Console.Write(myArray[i, j] + "\t");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+            #endregion
 
 
 
             Console.ReadLine();
-            
         }
 
 
